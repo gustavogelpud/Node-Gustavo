@@ -1,6 +1,7 @@
 import Process from "../../models/Process.mjs";
 import Joi from "joi";
 import Boom from "@hapi/boom";
+import { BLUR_FILTER, GREYSCALE_FILTER, NEGATIVE_FILTER } from "../../commons/constans.mjs";
 
 const PayloadValidation = Joi.object({
     filters: Joi.array().min(1).items(Joi.string().valid(
